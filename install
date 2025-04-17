@@ -48,7 +48,7 @@ if ! ( \
     exit 1
 fi
 
-MSYS2_INSTALL_DIR=$({ cd / && pwd -W; } | sed 's|/|\\\\|g')
+MSYS2_INSTALL_DIR=$({ cd / && pwd -W; } | sed 's|/|\\\\|g')\\
 PWD_WIN_ESCAPED=$(pwd -W | sed -e 's|/|\\\\|g')\\\\
 echo "MSYS Install Path is"
 echo -e "${MSYS2_INSTALL_DIR}"
